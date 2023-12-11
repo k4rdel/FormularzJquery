@@ -1,19 +1,10 @@
 <?php
-$host = 'localhost';
-$db = 'db1';
-$user = 'root';
-$password = '';
+    $host = 'localhost';
+    $db = 'db1';
+    $user = 'root';
+    $password = '';
 
-$dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
-
-try {
-    $pdo = new PDO($dsn, $user, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die('Błąd połączenia z bazą danych: ' . $e->getMessage());
-}
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $dsn = "mysql:host=$host;dbname=$db;charset=utf8mb4";
     $firstName = $_POST['firstName'];
     $lastName = $_POST['lastName'];
     $dob = $_POST['dob'];
@@ -28,5 +19,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->execute([$firstName, $lastName, $dob, $email, $phone, $voivodeship, $gender, $newsletter]);
 
     echo 'Dane zostały pomyślnie zapisane w bazie danych.';
-}
 ?>
