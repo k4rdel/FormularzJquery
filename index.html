@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,73 +13,85 @@
             margin-top: 50px;
         }
     </style>
+    <script src="script.js"></script>
 </head>
 <body>
-
-<div class="container">
-    <form id="registrationForm" method="post" action="process_form.php">
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="firstName">Imię</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="lastName">Nazwisko</label>
-                <input type="text" class="form-control" id="lastName" name="lastName" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="dob">Data urodzenia</label>
-                <input type="date" class="form-control" id="dob" name="dob" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="email">Adres email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label for="phone">Telefon</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
-            </div>
-            <div class="form-group col-md-6">
-                <label for="voivodeship">Województwo</label>
-                <select class="form-control" id="voivodeship" name="voivodeship" required>
-                    <option value="" selected disabled>Wybierz województwo</option>
-                   <option value="mazowieckie">Mazowieckie</option>
-                </select>
-            </div>
-        </div>
-        <div class="form-row">
-            <div class="form-group col-md-6">
-                <label>Płeć</label><br>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
-                    <label class="form-check-label" for="male">Mężczyzna</label>
+    <div class="container">
+        <form id="registrationForm" method="post" action="process_form.php">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstName">Imię</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
-                    <label class="form-check-label" for="female">Kobieta</label>
+                <div class="form-group col-md-6">
+                    <label for="lastName">Nazwisko</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
                 </div>
             </div>
-            <div class="form-group col-md-6">
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
-                    <label class="form-check-label" for="newsletter">Zgoda na newsletter</label>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="dob">Data urodzenia</label>
+                    <input type="date" class="form-control" id="dob" name="dob" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Adres email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Zarejestruj</button>
-    </form>
-</div>
-
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
-<script src="script.js"></script>
-
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="phone">Telefon</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="voivodeship">Województwo</label>
+                    <select class="form-control" id="voivodeship" name="voivodeship" required>
+                        <option value="" selected disabled>Wybierz województwo</option>
+                    <option value="Mazowieckie">Mazowieckie</option>
+                    <option value="Wielkoposlkie">Wielkoposlkie</option>
+                    <option value="Dolnośląskie">Dolnośląskie</option>
+                    <option value="Małopolskie">Małopolskie</option>
+                    <option value="Lubelskie">Lubelskie</option>
+                    <option value="Lubuskie">Lubuskie</option>
+                    <option value="Kujawskopomorskie">Kujawsko-pomorskie</option>
+                    <option value="Łódzkie">Łódzkie</option>
+                    <option value="Opolskie">Opolskie</option>
+                    <option value="Pomorskie">Pomorskie</option>
+                    <option value="Podlaskie">Podlaskie</option>
+                    <option value="Śląskie">Śląskie</option>
+                    <option value="Świętokrzyskie">Świętokrzyskie</option>
+                    <option value="Warmińskomazurskie">Warmińsko-mazurskie</option>
+                    <option value="Zachodniopomorskie">Zachodniopomorskie</option>
+                    <option value="Podkarpackie">Podkarpackie</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Płeć</label><br>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" required>
+                        <label class="form-check-label" for="male">Mężczyzna</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gender" id="female" value="female" required>
+                        <label class="form-check-label" for="female">Kobieta</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newsletter" name="newsletter">
+                        <label class="form-check-label" for="newsletter">Zgoda na newsletter</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Zarejestruj</button>
+        </form>
+    </div>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </body>
 </html>
